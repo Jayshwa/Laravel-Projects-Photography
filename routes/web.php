@@ -48,3 +48,6 @@ Route::get('/about-me', [App\Http\Controllers\AboutMe::class, 'index'])->name('a
 
 /*|contains the reviews route|*/
 Route::get('/reviews', [App\Http\Controllers\Reviews::class, 'index'])->name('reviews');
+
+/*|Posts contact form data to mySQL|*/
+Route::post('/form', [App\Http\Controllers\ContactController::class, 'store'])->name('contact-form');
