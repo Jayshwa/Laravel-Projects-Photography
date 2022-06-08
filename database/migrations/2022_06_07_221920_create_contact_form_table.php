@@ -12,11 +12,11 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
+    {//Scheam::create will create a table of the specified name within the database in the .env file
         Schema::create('contact_form', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
+            $table->string('email')->unique();
             $table->string('subject');
             $table->string('message');
             $table->timestamps();

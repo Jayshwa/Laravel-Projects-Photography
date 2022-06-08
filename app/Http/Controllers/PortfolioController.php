@@ -8,18 +8,18 @@ class PortfolioController extends Controller
 {
     public function portfolioEngagement()
     {
-        return view('portfolio-engagement');
+        return view('portfolio.portfolio-engagement');
     }
     public function portfolioEvents()
     {
-        return view('portfolio-events');
+        return view('portfolio.portfolio-events');
     }
     public function portfolioPortraits()
     {
-        return view('portfolio-portraits');
+        return view('portfolio.portfolio-portraits');
     }
     public function portfolioFamilies()
     {
-        return view('portfolio-families');
+        return view('portfolio.portfolio-families');
     }
 }

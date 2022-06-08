@@ -8,18 +8,18 @@ class BookingsController extends Controller
 {
     public function bookingsEngagement()
     {
-        return view('bookings-engagement');
+        return view('bookings.bookings-engagement');
     }
     public function bookingsEvents()
     {
-        return view('bookings-events');
+        return view('bookings.bookings-events');
     }
     public function bookingsPortraits()
     {
-        return view('bookings-portraits');
+        return view('bookings.bookings-portraits');
     }
     public function bookingsFamilies()
     {
-        return view('bookings-families');
+        return view('bookings.bookings-families');
     }
 }

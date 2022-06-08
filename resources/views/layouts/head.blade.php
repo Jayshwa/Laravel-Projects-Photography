@@ -23,6 +23,7 @@
 
     </head>
     <body>
+        @yield('auth.login')
         @yield('navbar')
         @yield('content')
         @yield('intro')
