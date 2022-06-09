@@ -26,7 +26,7 @@ Route::get('/parallax', [App\Http\Controllers\Parallax::class, 'index'])->name('
 
 /*|contains the portfolio routes|*/
 
-Route::get('/portfolio/events', [App\Http\Controllers\PortfolioController::class, 'portfolioEvents'])->name('portfolio-events');
+Route::get('/portfolio/events', [App\Http\Controllers\PortfolioController::class, 'portfolioEvents'])->name('portfolio-events')->middleware('auth');
 
 Route::get('/portfolio/portraits', [App\Http\Controllers\PortfolioController::class, 'portfolioPortraits'])->name('portfolio-portraits');
 
@@ -51,3 +51,4 @@ Route::get('/reviews', [App\Http\Controllers\Reviews::class, 'index'])->name('re
 
 /*|Posts contact form data to mySQL|*/
 Route::post('/form', [App\Http\Controllers\ContactController::class, 'store'])->name('contact-form');
+

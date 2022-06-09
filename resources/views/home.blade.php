@@ -1,7 +1,15 @@
 @extends('layouts.head')
 
 @section('content')
-@include('navbar')
+
+        @auth
+            @include('navbar-logged-in')
+        @endauth
+
+        @guest
+            @include('navbar-logged-out')
+        @endguest
+
 <div class="fixed-top home-parallax-top noselect"></div>
 <div class="container my-5 title-strip" style="font-family: 'Quicksand', sans-serif;">
     <h1 class="text-center display-2 text-white noselect">JOSHUA YOUNG</h1>
