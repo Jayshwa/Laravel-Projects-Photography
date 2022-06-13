@@ -13,16 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*|Admin routes|*/
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
+    Route::get('/profile/{id}', [App\Http\Controllers\AdminController::class, 'profile'])->name('profile');
+    Route::get('/users', [App\Http\Controllers\AdminController::class, 'users'])->name('users');
+    Route::post('/users', [App\Http\Controllers\AdminController::class, 'update'])->name('users');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/sample', [App\Http\Controllers\Sample::class, 'index'])->name('sample');
-
-Route::get('/parallax', [App\Http\Controllers\Parallax::class, 'index'])->name('parallax');
-
 
 /*|contains the portfolio routes|*/
 
@@ -47,8 +51,12 @@ Route::get('/bookings/engagement', [App\Http\Controllers\BookingsController::cla
 Route::get('/about-me', [App\Http\Controllers\AboutMe::class, 'index'])->name('about-me');
 
 /*|contains the reviews route|*/
-Route::get('/reviews', [App\Http\Controllers\Reviews::class, 'index'])->name('reviews');
+Route::get('/reviews', [App\Http\Controllers\Reviews::class, 'index'])->name('reviews')->middleware('isAdmin');
 
 /*|Posts contact form data to mySQL|*/
 Route::post('/form', [App\Http\Controllers\ContactController::class, 'store'])->name('contact-form');
+
+Route::get('/profile/{id}', [App\Http\Controllers\UserController::class, 'index'])->name('profile');
+
+
 

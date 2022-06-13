@@ -1,4 +1,10 @@
 @extends('layouts.head')
 @section('book-families')
-@include('navbar')
+@auth
+    @include('navbar-logged-in')
+@endauth
+
+@guest
+    @include('navbar-logged-out')
+@endguest
 @endsection

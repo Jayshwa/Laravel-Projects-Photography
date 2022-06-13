@@ -1,4 +1,4 @@
 @extends('layouts.head')
-@section('reviews')
+@section('content')
 @include('navbar')
 @endsection
