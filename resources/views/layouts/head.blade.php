@@ -23,6 +23,18 @@
 
     </head>
     <body>
+        @auth
+        @if(\Auth::user()->role == "1")
+            @include('admin.navbar-admin')
+        @else
+            @include('navbar.navbar-logged-in')
+        @endif
+            
+        @endauth
+
+        @guest
+            @include('navbar.navbar-logged-out')
+        @endguest
 
         @yield('navbar')
         @yield('content')
@@ -42,7 +54,6 @@
         @yield('reviews')
         @yield('about')
 
-        @yield('pizzas')
     </body>
     </html>
     

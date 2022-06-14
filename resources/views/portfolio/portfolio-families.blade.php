@@ -1,13 +1,6 @@
 @extends('layouts.head')
 <!-- Gallery -->
 @section('families')
-@auth
-    @include('navbar-logged-in')
-@endauth
-
-@guest
-    @include('navbar-logged-out')
-@endguest
 <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
       <img

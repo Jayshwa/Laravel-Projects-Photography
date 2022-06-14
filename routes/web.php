@@ -18,12 +18,13 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::get('/profile/{id}', [App\Http\Controllers\AdminController::class, 'profile'])->name('profile');
     Route::get('/users', [App\Http\Controllers\AdminController::class, 'users'])->name('users');
     Route::post('/users', [App\Http\Controllers\AdminController::class, 'update'])->name('users');
+    Route::get('/create', [App\Http\Controllers\AdminController::class, 'create'])->name('create');
 });
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -60,3 +61,7 @@ Route::get('/profile/{id}', [App\Http\Controllers\UserController::class, 'index'
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

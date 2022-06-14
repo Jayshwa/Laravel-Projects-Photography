@@ -1,11 +1,6 @@
 @extends('layouts.head')
 @section('content')
-@auth
-    @include('navbar-logged-in')
-@endauth
-@guest
-    @include('navbar-logged-out')
-@endguest
+<div><a href="/admin/create">Create</a></div>
 <table class="table">
   <thead>
     <tr>
@@ -24,25 +19,16 @@
       <td>{{$user->email}}</td>
       <td>{{$user->created_at}}</td>
       <td scope="col">
-      <form action="/admin/users" method="POST">
-            <div class="form-check">
-              <div class="d-flex flex-row bd-highlight mb-3">
-                <div>
-                  <input class="form-check-input" type="radio" name="0" id="flexRadioDefault1" style="margin-right:4px;">
-                  <label class="radio-inline control-label px-3">User</label>
-                </div>
-                <div>
-                  <input class="form-check-input" type="radio" name="1" id="flexRadioDefault1" style="margin-right:4px;">
-                  <label class="radio-inline control-label px-3">Admin</label>
-                </div>
-                <div>
-                  {{ csrf_field() }}
-                  <div class="form-check">
-                    <button type="submit" class="btn btn-dark p1">Update</button>
-                  </div>
-                </div>
-              </div>  
-            </div>
+        <form action="/admin/users" method="POST">
+          {{ csrf_field() }}
+          <div name="{{$user->id}}"></div>
+          <select class="form-select" id="role" name="role">
+            <option value="0">User</option>
+            <option value="1">Admin</option>
+          </select>
+          <div class="form-check form-check-inline">
+              <button type="submit" class="btn btn-dark mx-3 py-0">Update</button>
+          </div>
         </form>
       </td>
     </tr>
