@@ -1,6 +1,6 @@
 @section('contact')
 <!--Section: Contact v.2-->
-<div class="d-flex justify-content-center py-3 strip" style="font-family: 'Quicksand', sans-serif;">
+<div class="d-flex justify-content-center py-3 strip pb-5" style="font-family: 'Quicksand', sans-serif;">
 <section class="w-50">
 
     <!--Section heading-->

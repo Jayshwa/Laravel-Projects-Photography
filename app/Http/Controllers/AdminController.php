@@ -14,7 +14,7 @@ class AdminController extends Controller
 
     public function users()
     {
-        $users = User::all();
+        $users = User::simplePaginate(15);
         return view('admin.users', ['users'=>$users]);
     }
 
@@ -23,9 +23,19 @@ class AdminController extends Controller
         return view('admin.create');
     }
 
-    public function update(){
+    public function update(Request $request){
+        $id = $request->user;
 
+        $user = User::find($id);
+        $user->role = $request->role;
+        $user->update();
+        return redirect('/admin/users')->with('msg','User updated.');
+    }
 
-        return redirect('/')->with('msg','User updated.');
+    public function delete(Request $request){
+        $id = $request->user;
+        $user = User::find($id);
+        $user->delete();
+        return redirect('/admin/users')->with('msg','User deleted.');
     }
 }

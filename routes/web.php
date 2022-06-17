@@ -18,6 +18,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
     Route::get('/profile/{id}', [App\Http\Controllers\AdminController::class, 'profile'])->name('profile');
     Route::get('/users', [App\Http\Controllers\AdminController::class, 'users'])->name('users');
     Route::post('/users', [App\Http\Controllers\AdminController::class, 'update'])->name('users');
+    Route::delete('/users', [App\Http\Controllers\AdminController::class, 'delete'])->name('delete');
     Route::get('/create', [App\Http\Controllers\AdminController::class, 'create'])->name('create');
 });
 
@@ -31,7 +32,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 /*|contains the portfolio routes|*/
 
-Route::get('/portfolio/events', [App\Http\Controllers\PortfolioController::class, 'portfolioEvents'])->name('portfolio-events')->middleware('auth');
+Route::get('/portfolio/events', [App\Http\Controllers\PortfolioController::class, 'portfolioEvents'])->name('portfolio-events');
+/*->middleware('auth')*/
 
 Route::get('/portfolio/portraits', [App\Http\Controllers\PortfolioController::class, 'portfolioPortraits'])->name('portfolio-portraits');
 
@@ -52,7 +54,8 @@ Route::get('/bookings/engagement', [App\Http\Controllers\BookingsController::cla
 Route::get('/about-me', [App\Http\Controllers\AboutMe::class, 'index'])->name('about-me');
 
 /*|contains the reviews route|*/
-Route::get('/reviews', [App\Http\Controllers\Reviews::class, 'index'])->name('reviews')->middleware('isAdmin');
+Route::get('/reviews', [App\Http\Controllers\Reviews::class, 'index'])->name('reviews');
+/*->middleware('isAdmin')*/
 
 /*|Posts contact form data to mySQL|*/
 Route::post('/form', [App\Http\Controllers\ContactController::class, 'store'])->name('contact-form');

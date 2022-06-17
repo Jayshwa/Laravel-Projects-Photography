@@ -1,5 +1,6 @@
 html {
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 .home-parallax-top {
@@ -43,6 +44,43 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.blank-parallax-top {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    /* Set a specific height */
+    min-height: 500px;
+    max-height: 500px;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blank-parallax-bottom {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    /* Set a specific height */
+    min-height: 500px;
+    max-height: 500px;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .title-strip {
     position: absolute;
     top: 175px;
@@ -63,3 +101,70 @@ html {
 img {
     pointer-events: none;
 }
+
+
+  /* width */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+.carousel-caption {
+    top: 30%;
+    bottom: auto;
+}
+
+.carousel .item {
+  height: 700px;
+}
+
+.item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
+.left.carousel-control.reviews, .right.carousel-control.reviews{
+background: none;
+height: auto;
+}
+
+.carousel-inner-reviews{
+  max-height: 40vh;
+}
+
+.testimony-caption{
+  max-width: 600px;
+}
+
+.reviews-item{
+margin: auto;
+margin-top: 5%;
+width: 50%;
+}
+
+.glyphicon.glyphicon-chevron-left, .glyphicon.glyphicon-chevron-right{
+  color: black;
+}
+
+.carousel.slide.reviews{
+  max-height: 40vh;
+}
+

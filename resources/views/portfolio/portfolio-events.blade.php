@@ -4,13 +4,13 @@
 <div class="row">
     <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
       <img
-        src="{{asset('images/events/EventsOne.jpg')}}"
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Boat on Calm Water"
       />
   
       <img
-        src="{{asset('images/events/EventsThree.jpg')}}"
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Wintry Mountain Landscape"
       />
@@ -18,13 +18,13 @@
   
     <div class="col-lg-4 mb-4 mb-lg-0">
       <img
-      src="{{asset('images/events/EventsTwo.jpg')}}"
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Mountains in the Clouds"
       />
   
       <img
-      src="{{asset('images/events/EventsFour.jpg')}}"
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Boat on Calm Water"
       />
@@ -32,13 +32,13 @@
   
     <div class="col-lg-4 mb-4 mb-lg-0">
       <img
-      src="{{asset('images/events/EventsFive.jpg')}}"
+        src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Waves at Sea"
       />
   
       <img
-      src="{{asset('images/events/EventsSix.jpg')}}"
+        src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
         class="w-100 shadow-1-strong rounded mb-4"
         alt="Yosemite National Park"
       />
