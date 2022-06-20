@@ -1,14 +1,14 @@
 @section('contact')
 <!--Section: Contact v.2-->
-<div class="d-flex justify-content-center py-3 strip pb-5" style="font-family: 'Quicksand', sans-serif;">
-<section class="w-50">
+<div class="d-flex justify-content-center py-3 pb-5 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="font-family: 'Quicksand', sans-serif;">
+<section class="w-75">
 
     <!--Section heading-->
     <h4 class="h1-responsive font-weight-bold text-center my-4">Get in touch!</h4>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">Want to know more? Don't hesitate to contact me directly.</p>
 
-    <div class="row">
+    <div class="row justify-content-center">
 
         <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
@@ -74,7 +74,7 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-md-3 text-center">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
                     <p>Leicester</p>

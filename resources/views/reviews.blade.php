@@ -1,11 +1,11 @@
 @extends('layouts.head')
 @section('content')
 <div class="container my-5" style="font-family: 'Quicksand', sans-serif;">
-	<h1 class="text-center display-2 text-black noselect">JOSHUA YOUNG</h1>
-	<h2 class="text-center display-3 text-black noselect">PHOTOGRAPHY</h2>
+	<h1 class="text-center display-2 text-black noselect text-responsive">JOSHUA YOUNG</h1>
+	<h2 class="text-center display-3 text-black noselect text-responsive">PHOTOGRAPHY</h2>
 </div>
 <!--Events Carousel-->
-<div id="carousel-example" class="carousel slide reviews review-section pb-5" data-ride="carousel">
+<div id="carousel-example" class="carousel slide reviews review-section pb-5 col-lg-12 col-md-12 col-sm-12 col-xs-12" data-ride="carousel">
   <div class="carousel-inner">
 	<!--ITEM-->
 
@@ -79,5 +79,5 @@
   
 </div>
 <!--End of Events Carousel-->
-@include('contact')
 @endsection
+@include('contact')

@@ -1,5 +1,5 @@
 @section('navbar')
-<nav class="navbar navbar-expand-lg navbar-light .bg-white">
+<nav class="navbar navbar-expand-lg navbar-light .bg-white col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
   <a class="navbar-brand" href="/">Joshua Young</a>
 

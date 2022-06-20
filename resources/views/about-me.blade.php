@@ -1,11 +1,11 @@
 @extends('layouts.head')
 @section('about')
-<div class="container my-5" style="font-family: 'Quicksand', sans-serif;">
-	<h1 class="text-center display-2 text-black noselect">JOSHUA YOUNG</h1>
-	<h2 class="text-center display-3 text-black noselect">PHOTOGRAPHY</h2>
+<div class="container my-1" style="font-family: 'Quicksand', sans-serif;">
+	<h1 class="text-center display-2 text-black noselect text-responsive">JOSHUA YOUNG</h1>
+	<h2 class="text-center display-3 text-black noselect text-responsive">PHOTOGRAPHY</h2>
 </div>
-<div class="strip my-5">
-    <div class="container w-50 my-5 py-3" style="font-family: 'Quicksand', sans-serif;">
+<div class="strip my-1">
+    <div class="container w-75 my-1" style="font-family: 'Quicksand', sans-serif;">
         <h5 class="py-3">LEICESTERSHIRE PHOTOGRAPHER</h5>
         <h3>Telling your story</h3>
         <p class="">
@@ -17,3 +17,4 @@
     </div>
 </div>
 @endsection
+@include('contact')

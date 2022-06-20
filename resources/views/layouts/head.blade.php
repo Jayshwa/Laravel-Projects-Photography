@@ -27,6 +27,7 @@
 
     </head>
     <body>
+        <div class="row">
         @auth
         @if(\Auth::user()->role == "1")
             @include('admin.navbar-admin')
@@ -59,8 +60,8 @@
 
         @yield('reviews')
         @yield('about')
+        </div>
         @yield('contact')
-
     </body>
     </html>
     
